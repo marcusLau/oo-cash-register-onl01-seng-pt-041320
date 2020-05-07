@@ -33,7 +33,9 @@ class CashRegister
   # for each removed item subtract that item price * item removed
   def void_last_transaction
     
-    # Array.delete(element)
+    # Array.delete(element): will remove ALL instances of said element
+    
+    
   end
     
 end
