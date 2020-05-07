@@ -13,7 +13,7 @@ class CashRegister
   
   def add_item(item, price, quantity=1)
     @total += (price*quantity)
-    @price = price
+    @price = price # sets @price equal to LAST ITEM added
     for i in 0..quantity-1
       @items << item
     end
@@ -34,6 +34,14 @@ class CashRegister
   def void_last_transaction
     
     # Array.delete(element): will remove ALL instances of said element
+    
+    item_to_remove = @items[-1]
+    remove_counter = 0
+    @items.each do |item|
+      if item == item_to_remove
+        remove_counter += 1
+      end
+    end
     
     
   end
