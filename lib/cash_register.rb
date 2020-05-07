@@ -43,7 +43,7 @@ class CashRegister
       end
     end
     
-    
+    @total = @total - (@price * remove_counter)
   end
     
 end
