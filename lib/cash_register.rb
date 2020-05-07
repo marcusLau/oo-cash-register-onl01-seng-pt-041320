@@ -42,7 +42,7 @@ class CashRegister
         remove_counter += 1
       end
     end
-    
+    @items.delete(item_to_remove) # deletes all instances of last item added from array
     @total = @total - (@price * remove_counter)
   end
     
